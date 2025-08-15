@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+  </head>
+  <body class="bg-[#154c79] text-white h-[100vh] flex text-5xl flex-col gap-4">
+    <main
+      class="container mx-auto mt-[20%] bg-gray-500 w-[500px] text-center p-10 flex flex-col gap-10 rounded-xl"
+    >
+      <h1>Guess Number</h1>
+      <section
+        id="choice-list"
+        class="choice grid grid-cols-3 w-[250px] mx-auto gap-6 border p-4 rounded-xl"
+      >
+        <span
+          id="choice-1"
+          class="hover:scale-150 transition-all duration-300 cursor-pointer"
+          >1</span
+        >
+        <span
+          id="choice-2"
+          class="hover:scale-150 transition-all duration-300 cursor-pointer"
+          >2</span
+        >
+        <span
+          id="choice-3"
+          class="hover:scale-150 transition-all duration-300 cursor-pointer"
+          >3</span
+        >
+        <span
+          id="choice-4"
+          class="hover:scale-150 transition-all duration-300 cursor-pointer"
+          >4</span
+        >
+        <span
+          id="choice-5"
+          class="hover:scale-150 transition-all duration-300 cursor-pointer"
+          >5</span
+        >
+        <span
+          id="choice-6"
+          class="hover:scale-150 transition-all duration-300 cursor-pointer"
+          >6</span
+        >
+      </section>
+      <section class="result">
+        <p id="result-text">Pick Number</p>
+      </section>
+    </main>
+    <section class="retry container mx-auto text-right w-[500px]">
+      <button
+        id="retry-button"
+        class="p-3 rounded-xl text-4xl hover:scale-120 transition-all duration-300 cursor-pointer"
+      >
+        Retry
+      </button>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
