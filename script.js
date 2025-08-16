@@ -1,4 +1,5 @@
 const resultText = document.getElementById('result-text');
+const resultCard = document.getElementById('result-card');
 const retryButton = document.getElementById('retry-button');
 const choiceList = document.getElementById('choice-list');
 let countClicks = 0;
@@ -31,10 +32,12 @@ for (let i = 1; i <= 6; i++) {
     console.log(`click ${countClicks}`);
     if (countClicks == 3 && text != 'Correct') {
       resultText.innerText = 'Failed';
+      resultCard.classList.add('bg-red-600');
       choiceList.classList.add('pointer-events-none');
     }
     if (text == 'Correct') {
       choiceList.classList.add('pointer-events-none');
+      resultCard.classList.add('bg-green-500');
     }
   });
 }
@@ -43,6 +46,7 @@ retryButton.addEventListener('click', () => {
   randomNumber = generateRandomNumber();
   resultText.innerText = 'Pick Number';
   choiceList.classList.remove('pointer-events-none');
+  resultCard.classList.remove('bg-red-600', 'bg-green-500');
   countClicks = 0;
   console.log(randomNumber);
 });
